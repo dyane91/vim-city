@@ -30,7 +30,7 @@ export const getResult = (
         })
       )
     } else {
-      const {data} = await axios.put(`${process.env.DOCKER_URL}/eval`, {
+      const {data} = await axios.put(`/api/eval`, {
         userInputStr: codeStr,
         challengeId: challengeId
       })
