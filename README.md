@@ -41,4 +41,4 @@ VIM City was built using Node.js, Express, PostgreSQL, Sequelize, React, Redux, 
 
 ## Authors
 
-Taylor Thompson, Dyana Avalos, Nikki Bergamini, Stephanie Siyi Wu
+Taylor Thompson, Dyane Avalos, Nikki Bergamini, Stephanie Siyi Wu

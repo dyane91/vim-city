@@ -66,12 +66,12 @@ const createApp = () => {
 
   app.enable('trust proxy')
 
-  app.use('*', function(req, res, next) {
-    if (req.protocol === 'https') {
-      return res.redirect('http://' + req.headers.host + req.originalUrl)
-    }
-    next()
-  })
+  // app.use('*', function(req, res, next) {
+  //   if (req.protocol === 'https') {
+  //     return res.redirect('http://' + req.headers.host + req.originalUrl)
+  //   }
+  //   next()
+  // })
 
   // auth and api routes
   app.use('/auth', require('./auth'))
