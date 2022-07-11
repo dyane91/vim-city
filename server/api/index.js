@@ -6,14 +6,18 @@ router.use('/users', require('./users'))
 router.use('/challenges', require('./challenges'))
 
 router.put('/eval', async (req, res) => {
-  const {userInputStr, challengeId} = req.body
-  const resp = await fetch(process.env.DOCKER_URL, {
-    method: 'put',
-    body: JSON.stringify({userInputStr, challengeId})
-  })
+  try {
+    const {userInputStr, challengeId} = req.body
+    const resp = await fetch(process.env.DOCKER_URL, {
+      method: 'put',
+      body: JSON.stringify({userInputStr, challengeId})
+    })
 
-  const data = await resp.json()
-  res.send(data)
+    const data = await resp.json()
+    res.send(data)
+  } catch (error) {
+    throw error
+  }
 })
 
 router.use((req, res, next) => {
